@@ -1,28 +1,18 @@
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+document.addEventListener("DOMContentLoaded", function() {
+    let menu = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+    menu.onclick = () => {
+        navbar.classList.toggle('active');
+    };
 
+    ScrollReveal({
+        reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+    });
 
-}
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navbar.classList.remove('active');
-}
-
-const sr = ScrollReveal ({
-    distance : '60px',
-    duration : 2500,
-    delay: 400,
-    reset: true
-})
-sr.reveal('.text',{delay: 200, origin: 'top'})
-sr.reveal('.form-container form',{delay: 800, origin: 'left'})
-sr.reveal('.heading',{delay: 800, origin: 'top'})
-sr.reveal('.ride-container .box',{delay: 600, origin: 'top'})
-sr.reveal('.sevices-container .box',{delay: 600, origin: 'top'})
-sr.reveal('.about-container form',{delay: 600, origin: 'top'})
-sr.reveal('.newsletter .box',{delay: 400, origin: 'bottom'})
-
+    ScrollReveal().reveal('.heading, .ride-container .box', { delay: 500, origin: 'top' });
+    ScrollReveal().reveal('.text, .form-container', { delay: 600, origin: 'left' });
+});
