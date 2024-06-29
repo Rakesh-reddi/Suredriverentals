@@ -90,7 +90,7 @@ header {
     background: var(--main-color);
 }
 .home {
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     position: relative;
     background: url(Sales\ Product\ Website.png);
